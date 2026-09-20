@@ -1,0 +1,44 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  body {
+    background-color: #FAF8F5;
+    color: #1A1E1C;
+    overflow-x: hidden;
+  }
+
+  ::selection {
+    background-color: #B49A63;
+    color: #FFFFFF;
+  }
+}
+
+/* Custom Luxury Hospitality Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+/* Smooth Focus Rings */
+*:focus-visible {
+  outline: 2px solid #B49A63;
+  outline-offset: 2px;
+}
